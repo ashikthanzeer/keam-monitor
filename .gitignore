@@ -3,6 +3,35 @@ __pycache__/
 *.log
 .venv/
 .env
+state.json
 openspec/
 .github/prompts
 .github/skills
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OpenSpec
+.openspec/
+openspec/
+
+# Secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

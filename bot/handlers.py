@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 
 from telegram import Message, Update
 from telegram.ext import Application, CommandHandler, ContextTypes
@@ -8,7 +9,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from bot.commands import get_latest_update, get_monitor_status
 from utils.subscribers import add_subscriber, remove_subscriber
 
-TOKEN = "8733253525:AAGiqAnIHpUFPrpY9fwWMXt0iPaaXdg2MZ8"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 logger = logging.getLogger(__name__)
 
 

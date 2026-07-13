@@ -9,6 +9,10 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from bot.commands import get_latest_update, get_monitor_status
 from utils.subscribers import add_subscriber, remove_subscriber
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 logger = logging.getLogger(__name__)
 
@@ -97,10 +101,8 @@ def build_application() -> Application:
 
 def main() -> None:
     """Run the interactive Telegram bot polling loop."""
+    app = build_application()
     app.run_polling()
-
-
-app = build_application()
 
 
 if __name__ == "__main__":

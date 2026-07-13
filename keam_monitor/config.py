@@ -5,6 +5,10 @@ import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 DEFAULT_URL = "https://cee.kerala.gov.in/keam2026/allotlist"
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
